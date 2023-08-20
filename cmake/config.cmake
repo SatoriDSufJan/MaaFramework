@@ -18,8 +18,9 @@ if (MSVC)
     add_link_options("$<$<CONFIG:Release>:${release_link_options}>")
 
     set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
-else ()
+else () # Unix
     add_compile_options("-Wall;-Werror;-Wextra;-Wpedantic;-Wno-missing-field-initializers")
+    add_compile_definitions(MAA_USE_FMTLIB)
     if (CMAKE_CXX_COMPILER_ID MATCHES "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 13)
         add_compile_options("-Wno-restrict")
     endif()

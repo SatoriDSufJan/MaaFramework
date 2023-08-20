@@ -11,7 +11,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_MAP_IMPORTED_CONFIG_DebWithRelDeps "DebWithRelDeps;Release;")
 set(Boost_NO_WARN_NEW_VERSIONS 1)
 
-option(BUILD_SAMPLE "build a demo" OFF)
+option(BUILD_SAMPLE "build a demo" ON)
 option(USE_MAADEPS "use third-party libraries built by MaaDeps" ON)
 option(WITH_THRIFT "build with thrift" ON)
 

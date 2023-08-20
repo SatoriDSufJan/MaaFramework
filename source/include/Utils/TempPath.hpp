@@ -22,7 +22,7 @@ inline std::string temp_name()
     LogInfo << p << pos << (p + pos + 1);
     return p + pos + 1;
 #else
-    auto _ret __attribute__((unused)) = tmpnam(p);
+    auto _ret __attribute__((unused)) = mkstemp(p);
     return p + sizeof(P_tmpdir);
 #endif
 }
